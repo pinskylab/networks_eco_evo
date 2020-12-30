@@ -325,7 +325,7 @@ def dZdt_fun(r_max,T,z,w,alphas,species_type,mpa_status,N_all,m_const,mortality_
     dGdZ = dGdZ_fun(r_max,T,z,w,alphas,species_type,mpa_status,N_all,m_const,mortality_model,alg_mort)
     directional_selection = q * V * dGdZ
     gene_flow_term1 = (np.dot(D, N_all * z) / np.dot(D, N_all)) - z
-    gene_flow_term2 = (beta * np.dot(D, N_all)) / (beta * np.dot(D, N_all) + N_all)
+    gene_flow_term2 = (beta * np.dot(D, N_all)) / N_all
     free_space = 1 - N_all.sum(axis=1)
     gene_flow = np.array([(gene_flow_term1*gene_flow_term2)[index,:] * x for index, x in enumerate(free_space)])
     algae_ID = np.where(species_type==2)[1] #find algae columns
