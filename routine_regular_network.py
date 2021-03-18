@@ -29,10 +29,6 @@ N_1_all = np.zeros((P.size,P.nsp,P.runtime,length,length))
 Z_1_all = np.zeros((P.size,P.nsp,P.runtime,length,length))
 SST_all = np.zeros((P.size,P.runtime,length,length))
 
-#anomalies_burn = np.tile(np.random.normal(0,P.temp_stoch,P.burnin),P.size).reshape((P.size,P.burnin)) + np.random.multivariate_normal(np.repeat(0,P.size),P.spatial_temp,P.burnin).T
-#anomalies_run = np.tile(np.random.normal(0,P.temp_stoch,P.runtime),P.size).reshape((P.size,P.runtime)) + np.random.multivariate_normal(np.repeat(0,P.size),P.spatial_temp,P.runtime).T
-#algaemort_full = np.random.uniform(0.1,.1,(P.runtime+P.burnin)*P.size).reshape((P.size,P.runtime+P.burnin))
-
 
 anomalies_burn = np.tile(np.random.normal(0,P.temp_stoch,P.burnin),P.size).reshape((P.size,P.burnin)) 
 anomalies_run = np.tile(np.random.normal(0,P.temp_stoch,P.runtime),P.size).reshape((P.size,P.runtime)) 
