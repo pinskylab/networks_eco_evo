@@ -6,8 +6,10 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import NoNorm
 import time
 import random
-from functions_revised3 import *
-import regular_batch_param_single1 as P
+from generate_random_matrix import *
+from functions import *
+import random_batch_param as P
+import networkx as nx
 
 length = 30
 alpha_V_mat0 = np.zeros((length,length))
@@ -28,7 +30,6 @@ SST0_all= np.zeros((P.size,P.burnin,length,length))
 N_1_all = np.zeros((P.size,P.nsp,P.runtime,length,length))
 Z_1_all = np.zeros((P.size,P.nsp,P.runtime,length,length))
 SST_all = np.zeros((P.size,P.runtime,length,length))
-
 
 anomalies_burn = np.tile(np.random.normal(0,P.temp_stoch,P.burnin),P.size).reshape((P.size,P.burnin)) 
 anomalies_run = np.tile(np.random.normal(0,P.temp_stoch,P.runtime),P.size).reshape((P.size,P.runtime)) 
@@ -79,7 +80,11 @@ if __name__ == '__main__':
         anomalies_run = np.tile(np.random.normal(0,P.temp_stoch,P.runtime),P.size).reshape((P.size,P.runtime)) 
         algaemort_full = np.random.uniform(0.15,0.15,(P.runtime+P.burnin)*P.size).reshape((P.size,P.runtime+P.burnin))
 
-        D = P.D
+        G = nx.fast_gnp_random_graph(n=20,p=4/20,seed=seed)
+        D0 = nx.to_numpy_matrix(G)
+        di = np.diag_indices(20)
+        D0[di] = 1
+        D = D_norm(D0)
 
         for i in np.arange(0,length):
             V = np.repeat(V_vals[i],P.nsp)
@@ -159,15 +164,14 @@ if __name__ == '__main__':
                 N_1, Z_1, SST_final1 = coral_trait_stoch_fun0(parameters_dict,N_0[:,:,-1],Z_0[:,:,-1],
                                                                       SST_final0[:,-1],anomalies_run,algaemort_full,
                                                                       temp_change="sigmoid")
-        
                 N_1_all[:,:,:,i,j] = N_1
                 Z_1_all[:,:,:,i,j] = Z_1
                 SST_all[:,:,i,j] = SST_final1
 
-                np.save("./single1/N_mat_self_rec0_" + str(seed) + ".npy", N_0_all)
-                np.save("./single1/Z_mat_self_rec0_" + str(seed) + ".npy", Z_0_all)
-                np.save("./single1/SST_mat_self_rec0_" + str(seed) + ".npy", SST0_all)
+                np.save("N_mat_self_rec0_" + str(seed) + ".npy", N_0_all)
+                np.save("Z_mat_self_rec0_" + str(seed) + ".npy", Z_0_all)
+                np.save("SST_mat_self_rec0_" + str(seed) + ".npy", SST0_all)
         
-                np.save("./single1/N_mat_self_rec_" + str(seed) + ".npy", N_1_all)
-                np.save("./single1/Z_mat_self_rec_" + str(seed) + ".npy", Z_1_all)
-                np.save("./single1/SST_mat_self_rec_" + str(seed) + ".npy", SST_all)
+                np.save("N_mat_self_rec_" + str(seed) + ".npy", N_1_all)
+                np.save("Z_mat_self_rec_" + str(seed) + ".npy", Z_1_all)
+                np.save("SST_mat_self_rec_" + str(seed) + ".npy", SST_all)
