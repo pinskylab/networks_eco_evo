@@ -3,7 +3,7 @@
 This repository contains simulated data and associated code for the manuscript 'Evolution reverses the effect of network structure on metapopulation persistence.'
 
 **Authors:**   
-Lisa C. McManus<sup>1,2</sup>, Edward W. Tekwa<sup>1</sup>, Daniel E. Schindler<sup>3</sup>, Timothy E. Walsworth<sup>4</sup>, Madhavi A. Colton<sup>5</sup>, Michael M. Webster<sup>6</sup>, Timothy E. Essington<sup>3</sup>, Daniel L. Forrest<sup>1</sup>, Stephen R. Palumbi<sup>7</sup>, Peter J. Mumby<sup>8</sup>, Malin L. Pinsky<sup>1</sup>
+Lisa C. McManus<sup>1,2</sup>, Edward W. Tekwa<sup>1</sup>, Daniel E. Schindler<sup>3</sup>, Timothy E. Walsworth<sup>4</sup>, Madhavi A. Colton<sup>5</sup>, Michael M. Webster<sup>6</sup>, Timothy E. Essington<sup>3</sup>, Daniel L. Forrest<sup>1</sup>, Stephen R. Palumbi<sup>7</sup>, Peter J. Mumby<sup>8</sup> and Malin L. Pinsky<sup>1</sup>
 
 **Affiliations:**  
 <sup>1</sup>Department of Ecology, Evolution, and Natural Resources, Rutgers University, New Brunswick, NJ, USA.  
@@ -16,7 +16,7 @@ Lisa C. McManus<sup>1,2</sup>, Edward W. Tekwa<sup>1</sup>, Daniel E. Schindler<
 <sup>8</sup>Marine Spatial Ecology Laboratory, School of Biological Sciences, The University of Queensland, St Lucia, Queensland, Australia.  
 
 **Notes:**
-To regenerate figures in the main text, use the Jupyter notebook 'Figures for McManus et al. (2021) Ecology.ipnyb.' The data to generate these figures are in the 'Data' directory.  
+To regenerate figures in the main text, use the Jupyter notebook 'Figures for McManus et al. (2021) Ecology.ipnyb.' The data to generate these figures should be placed in the 'Data' directory. Some files are already there, but most of the data need to be downloaded from here  
 We have also included the scripts used for calculating numerical solutions on a high-performance computing system. Note that you may need to modify the syntax and install packages depending on the particular HPC that you are using. These data were generated on the Rutgers Amarel cluster.
 
 A description for each of the HPC scripts is as follows:
