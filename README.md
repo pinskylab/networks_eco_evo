@@ -34,7 +34,7 @@ A description for each of the HPC scripts is as follows:
 9. submit_random_summary_files.sh: file to submit 'random_summary_files_TS.py' to the HPC
 
 
-**Regular network simulations** (in HPC_scripts/random):  
+**Regular network simulations** (in HPC_scripts/regular):  
 1. functions.py: contains all functions called in the numerical solver
 2. D_reg.npy: connectivity/dispersal matrix for regular network simulations
 3. regular_batch_param.py: contains the parameter values and number of iterations  
