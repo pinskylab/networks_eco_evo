@@ -1,4 +1,5 @@
 # networks_eco_evo
+<a href="https://doi.org/10.5281/zenodo.4620329"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4620329.svg" alt="DOI"></a>
 
 This repository contains simulated data and associated code for the manuscript 'Evolution reverses the effect of network structure on metapopulation persistence.'
 
