@@ -16,7 +16,7 @@ Lisa C. McManus<sup>1,2</sup>, Edward W. Tekwa<sup>1</sup>, Daniel E. Schindler<
 <sup>8</sup>Marine Spatial Ecology Laboratory, School of Biological Sciences, The University of Queensland, St Lucia, Queensland, Australia.  
 
 **Notes:**
-To regenerate figures in the main text, use the Jupyter notebook 'Figures for McManus et al. (2021) Ecology.ipnyb.' The data to generate these figures should be placed in the 'Data' directory. Some files are already there, but most of the data need to be downloaded from here  
+To regenerate figures in the main text, use the Jupyter notebook 'Figures for McManus et al. (2021) Ecology.ipnyb.' The data to generate these figures should be placed in the 'Data' directory. Some files are already there, but most of the data need to be downloaded from here: https://doi.org/10.6084/m9.figshare.14245733.v1.  
 We have also included the scripts used for calculating numerical solutions on a high-performance computing system. Note that you may need to modify the syntax and install packages depending on the particular HPC that you are using. These data were generated on the Rutgers Amarel cluster.
 
 A description for each of the HPC scripts is as follows:
