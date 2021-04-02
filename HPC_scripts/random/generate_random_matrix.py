@@ -11,7 +11,7 @@ import networkx as nx
 def _distance_matrix(L):
     Dmax = L//2
  
-    D  = range(Dmax+1)
+    D  = list(range(Dmax+1))
     D += D[-2+(L%2):0:-1]
  
     return circulant(D)/Dmax
