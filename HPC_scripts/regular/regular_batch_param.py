@@ -3,21 +3,21 @@ import numpy as np
 
 iterations = 20 #number of iterations 
 
-nsp = 3 # Number of species in model
+nsp = 1 # Number of species in model
 size = 20 # Number of reefs in model, size is 60 in Walsworth et al. model
 burnin = 1500 # Length of burn-in period
 runtime = 500 # Length of environmental change period
 mid = 27. # Mean temperature across all reefs at start of simulation
 temp_range = 3. # Range of temperatures across reefs at start of simulation
-species_type = np.array([[1,1,2]]) # Species type ID
-species = ["C1","C2","M1"] # Species labels
+species_type = np.array([[1.]]) # Species type ID
+species = ["C1"] # Species labels
 temp_stoch = 0.6
-r_max = np.array([[1.5,1.5,1.]])
-w = np.array([[1.5,4.5,2.]])
-beta = np.array([[0.1,0.1,0.1]])
+r_max = np.array([[1.0]])
+w = np.array([[1.5]])
+beta = np.array([[0.05]])
 m_const = 0.1 # Value used for constant mortality case
 mortality_model = "temp_vary"
-V = np.array([[0.,0.,0.]])
+V = np.array([[0.]])
 annual_temp_change = 0.01
 maxtemp = 32 #for sigmoid temperature increase scenario
 step_size = 1
@@ -25,7 +25,7 @@ step_size = 1
 #! Species interaction matrix
 #species have no effect on each other or themselves
 #size needs to be nsp x nsp
-alphas = np.array([[1.,1.1,1.2],[1.,1.,1.2],[1.,1.,1.]]) 
+alphas = np.array([[1.]]) 
 
 #! Create multivariate normal covariance matrix for temperature anomalies
 mdim = size 

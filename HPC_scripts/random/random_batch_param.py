@@ -3,7 +3,7 @@ import numpy as np
 
 iterations = 20 #number of iterations 
 
-nsp = 3 # Number of species in model
+nsp = 1 # Number of species in model
 size = 20 # Number of reefs in model, size is 60 in Walsworth et al. model
 burnin = 1500 # Length of burn-in period
 runtime = 500 # Length of environmental change period
