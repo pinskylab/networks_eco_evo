@@ -458,8 +458,8 @@ def coral_trait_stoch_fun0(param,spp_state,trait_state,temps,anomalies,algaemort
             dZ1 = dZdt_fun(r_max,SST_matrix[:,i],Z_ALL[:,:,tick],w,alphas,species_type,mpa_status,
                             N_ALL[:,:,tick],m_const,mortality_model,alg_mort,V,D,beta)
 
-            N_ALL_1 = N_ALL[:,:,tick] + dN1
-            Z_ALL_1 = Z_ALL[:,:,tick]  + dZ1
+            N_ALL_1 = N_ALL[:,:,tick] + dN1*0.5
+            Z_ALL_1 = Z_ALL[:,:,tick]  + dZ1*0.5
 
             dN2 = dNdt_fun(r_max,SST_matrix[:,i],Z_ALL_1,w,alphas,species_type,mpa_status,
                              N_ALL_1,m_const,mortality_model,alg_mort,V,D,beta)
